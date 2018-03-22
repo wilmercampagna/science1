@@ -1,0 +1,52 @@
+body {
+  background-color: #F1F4F6;
+  font-family: Roboto;
+  margin: 0;
+}
+
+.portada {
+  /* margin: 0; */
+}
+
+
+.apphead {
+  display: grid;
+  grid-template-columns: 130px 1fr 40px 350px;
+  grid-gap: 10px;
+  background: #00204A;
+
+}
+.item {
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.headLogo{
+  padding-left: 5px;
+  margin: 0;
+}
+.headLogow{
+  padding: 5px;
+  margin: 0;
+}
+.menu {
+  font-size: 16px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+.menu a{
+  color: #F1F4F6;
+  text-decoration: none;
+}
+.menu li
+{
+  display: inline-block;
+  margin-left: 30px;
+}
