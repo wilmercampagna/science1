@@ -1,3 +1,46 @@
+/* Botones  */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?5jrugc');
+  src:  url('../fonts/icomoon.eot?5jrugc#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?5jrugc') format('truetype'),
+    url('../fonts/icomoon.woff?5jrugc') format('woff'),
+    url('../fonts/icomoon.svg?5jrugc#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-close:before {
+  content: "\ea0d";
+}
+
+/* Header */
+
 body {
   background-color: #F1F4F6;
   font-family: Roboto;
@@ -8,8 +51,9 @@ body {
   /* margin: 0; */
 }
 
-
 .apphead {
+  /* width: auto; */
+  max-width: 100%;
   display: grid;
   grid-template-columns: 130px 1fr 40px 350px;
   grid-gap: 10px;
@@ -49,4 +93,409 @@ body {
 {
   display: inline-block;
   margin-left: 30px;
+}
+
+/* Termina el header */
+
+/* Inicio del contenido */
+
+.cuerpo{
+  display: grid;
+  grid-template-columns: minmax(auto, 100%);
+  /* max-width: 100%; */
+  justify-content: center;
+  /* align-items: center; */
+  /* background: #005792; */
+}
+.container {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 50px 0.4fr 1fr 0.4fr 50px;
+  /* position: relative; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-areas: "foto foto foto foto foto"
+                        "while1 while1 while1 while1 while1"
+                        ". . mensaje1 . ."
+                        ". . aplicacion1 . ."
+                        ". wili1 mensaje2 soon .";
+}
+.foto{
+  grid-area: foto;
+  background: #005792;
+}
+.foto img{
+  /* width: auto; */
+  /* max-width: 100%; */
+}
+.ft {
+  margin: 0;
+}
+
+.ft img {
+  width: auto;
+  max-width: 100%;
+}
+.while1 {
+  grid-area: while1;
+  padding: 30px;
+  background: #005792;
+  font-size: 25px;
+  color: #F1F4F6;
+}
+.mensaje1 {
+  grid-area: mensaje1;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  color: #00204A;
+  padding: 20px;
+  margin: 20px;
+}
+
+.aplicacion1 {
+  grid-area: aplicacion1;
+  padding: 20px;
+  margin: 10px;
+  background: #00BBF0;
+  color: #00204A;
+  height: 122px;
+  border-radius: 10px;
+}
+.wili1 {
+  grid-area: wili1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #005792;
+  border-radius: 15px 0 0 15px;
+}
+.wili1 img {
+  align-items: center;
+}
+.mensaje2 {
+  grid-area: mensaje2;
+  text-align: justify;
+  padding: 0 10px;
+  background: #005792;
+}
+.soon {
+  grid-area: soon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #005792;
+  border-radius: 0 15px 15px 0;
+}
+.cajita1 {
+  background: rgba(255, 255, 255, .6);
+  border-radius: 10px;
+  margin: 10px;
+  color: #00204A;
+}
+.cajita1 p {
+  padding: 0 7px;
+}
+.cajita1 h2 {
+ padding: 0 7px;
+}
+.soon p{
+  font-size: 24px;
+  margin: 10px;
+}
+.soon h2 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.logit p {
+  font-size: 24px;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 10;
+  margin-bottom: 0;
+}
+.logit h3 {
+  font-size: 30px;
+  margin-top: 0;
+}
+.modelo1 {
+  /* height: 180px; */
+  color: #F1F4F6;
+}
+
+.modelo2 {
+  /* padding: 30px; */
+  height: 200px;
+
+}
+
+/* termina contenido  */
+/* inicio footer */
+
+.pie{
+  display: grid;
+  grid-template-columns: minmax(auto, 100%);
+  justify-content: center;
+  background: #00204A;
+  color: #F1F4F6;
+  margin-top: 60px;
+}
+.subfooter {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 100px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-areas: ". leftfooter rightfooter ."
+  /* background: #00204A; */
+  /* color: #F1F4F6; */
+}
+.leftfooter {
+  grid-area: leftfooter;
+  padding: 45px;
+  text-align: justify;
+}
+.rightfooter {
+  grid-area: rightfooter;
+  padding: 45px;
+  text-align: justify;
+}
+.rightfooter h2 {
+  background: rgba(255, 255, 255, .6);
+  border-radius: 5px;
+  text-align: center;
+  color: #00204A;
+}
+.bfot {
+  background-color: 00204A;
+}
+/* termina footer */
+
+/* inicio media quieries */
+
+@media screen and (max-width: 800px) {
+
+  /* media queries para header */
+
+  .apphead {
+    grid-template-columns: 130px 1fr 40px 130px;
+    padding: 8px;
+  }
+  .menu {
+    display: block;
+    text-align: center;
+    padding: 0 10px;
+  }
+  .menu li
+  {
+    margin: 0;
+  }
+  .headLogow {
+    padding: 0;
+  }
+  .headLogow img {
+    height: 55px;
+  }
+
+/* media queries contenido */
+/* contenido */
+
+.container {
+  grid-template-areas: "foto foto foto foto foto"
+                        "while1 while1 while1 while1 while1"
+                        ". mensaje1 mensaje1 mensaje1 ."
+                        ". aplicacion1 aplicacion1 aplicacion1 ."
+                        ". wili1 mensaje2 mensaje2 ."
+                        ". soon soon soon .";
+  }
+  .soon {
+    border-radius: 0 0 15px 15px;
+    display: block;
+    height: auto;
+  }
+  .modelo2 {
+    padding: 15px;
+  }
+  .wili1 {
+    border-radius: 15px 0 0 0;
+    padding-bottom: 10px
+  }
+  .mensaje2 {
+    border-radius: 0 15px 0 0;
+    padding-bottom: 10px
+  }
+  .mensaje2 h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  .while1 p {
+    font-size: 22px;
+    text-align: justify;
+  }
+  .mensaje1 {
+    margin: 0;
+  }
+  .mensaje1 h2 {
+    font-size: 28px;
+    margin: 18px;
+  }
+  .aplicacion1 {
+    padding: 0;
+    margin: 20px 60px;
+  }
+  .logit p {
+    font-size: 22px;
+  }
+  .logit h3 {
+    font-size: 26px;
+  }
+  .cajita1 {
+    padding: 8px 0;
+    margin: 0 20px;
+  }
+
+  /* media queries footer */
+  /* footer */
+  .subfooter {
+    display: flow-root;
+  }
+  .leftfooter, .rightfooter {
+    padding: 10px 50px;
+  }
+  .rightfooter h2{
+    margin: 10px 50px;
+  }
+  .rightfooter p, .leftfooter p {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  /* media queries header 500px */
+
+  .apphead {
+    background: rgba(0, 32, 74, 0.8);
+    grid-template-columns: 1fr;
+    display: flow-root;
+  }
+  .container {
+    grid-template-columns: 20px 0.4fr 1fr 0.4fr 20px;
+    grid-template-areas: "foto foto foto foto foto"
+                          "while1 while1 while1 while1 while1"
+                          "mensaje1 mensaje1 mensaje1 mensaje1 mensaje1"
+                          ". aplicacion1 aplicacion1 aplicacion1 ."
+                          ". wili1 wili1 wili1 ."
+                          ". mensaje2 mensaje2 mensaje2 ."
+                          ". soon soon soon .";
+  }
+  .headLogo {
+    padding: 0;
+  }
+  .headLogow img {
+    height: 0px;
+  }
+  .otitem {
+    height: 2px;
+  }
+  .menu {
+    padding: 10px 80px;
+  }
+  .menu li{
+    padding: 7px;
+  }
+  .menu ul {
+    border-bottom: 1px solid white;
+  }
+  .menu ul:first-child {
+    border-top: 1px solid white;
+  }
+
+  /* media queries contenido 500px */
+
+  .while1 {
+    padding: 10px;
+    height: auto;
+  }
+
+  .while1 p {
+    font-size: 16px;
+    margin: 0;
+  }
+  .mensaje1 {
+    padding: 0;
+  }
+  .mensaje1 h2 {
+    font-size: 22px;
+  }
+  .aplicacion1 {
+    margin: 30px 10px;
+    margin-top: 0;
+    height: 90px;
+  }
+  .logit p {
+    font-size: 17px;
+  }
+  .logit h3 {
+    font-size: 20px;
+  }
+  .wili1 {
+    border-radius: 15px 15px 0 0;
+    padding: 5px;
+    height: auto;
+  }
+  .wili1 img {
+    height: 100px;
+  }
+  .mensaje2 {
+    border-radius: 0;
+    height: auto;
+  }
+  .mensaje2 h2 {
+    font-size: 18px;
+  }
+  .mensaje2 p {
+    font-size: 16px;
+  }
+  .soon {
+    height: auto;
+  }
+  .cajita1 p {
+    font-size: 16px;
+  }
+  .cajita1 h2 {
+    font-size: 18px;
+  }
+
+  /* media quieries del footer */
+  /* inicio de footer */
+  .pie {
+    margin-top: 20px;
+  }
+  .leftfooter, .rightfooter {
+    padding: 10px;
+  }
+  .leftfooter h2 {
+    font-size: 16px;
+  }
+  .leftfooter p {
+    font-size: 14px;
+  }
+  .rightfooter p {
+    font-size: 14px;
+  }
+  .rightfooter h2 {
+    font-size: 16px;
+    margin: 18px 0;
+  }
+
+}
+
+@media screen and (max-width: 300px) {
+  .menu {
+    padding: 10px 40px;
+  }
 }
